@@ -13,8 +13,7 @@ public:
 
 class PassengerCar : virtual public Car {
 private:
-	std::string company;
-	std::string model;
+
 
 public:
 
@@ -27,8 +26,7 @@ public:
 class Bus : virtual public Car {
 
 private:
-	std::string company;
-	std::string model;
+
 
 public:
 
@@ -40,8 +38,7 @@ public:
 
 class Minivan : public Bus, public PassengerCar {
 private:
-	std::string company;
-	std::string model;
+
 
 public:
 

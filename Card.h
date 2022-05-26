@@ -40,7 +40,7 @@ public:
 	Card();
 	
 	void Flip();
-	int GetValue();
+	int GetValue()const;
 
 
 };
