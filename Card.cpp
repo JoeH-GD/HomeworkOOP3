@@ -1,7 +1,8 @@
 #include "Card.h"
 
-Card::Card(Points uCurrentPoints): mCurrentCardPoints(uCurrentPoints) {
+Card::Card(){
 
+	mCurrentCardPoints = QUEEN;
 }
 
 void Card::Flip() {
@@ -11,6 +12,7 @@ void Card::Flip() {
 
 int Card::GetValue()
 {
-	if (MyCard.QUEEN || MyCard.KING || MyCard.JACK || MyCard.TEN) return 10;
+	if (mCurrentCardPoints >= ACE && mCurrentCardPoints < KING) return mCurrentCardPoints;
+	else return 10;
     
 }

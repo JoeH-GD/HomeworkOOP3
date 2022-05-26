@@ -37,10 +37,10 @@ private:
 public:
 
 	//constructor to check the get value func
-	Card(Points uCurrentPoints);
+	Card();
 	
 	void Flip();
-	int GetValue(Card MyCard);
+	int GetValue();
 
 
 };

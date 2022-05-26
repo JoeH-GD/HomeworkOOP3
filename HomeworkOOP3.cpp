@@ -33,8 +33,9 @@ int main()
 
     Minivan("Volkswagen", "T1 Samba");
 
-    Card MyCard(HEARTS, JACK);
+    Card MyCard;
 
+    std::cout<<MyCard.GetValue();
 
 
 }
