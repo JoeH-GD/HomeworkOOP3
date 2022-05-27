@@ -1,6 +1,10 @@
 #include <iostream>
 #include "OperatorOverload.h"
 
+Fraction::Fraction()
+{
+}
+
 Fraction::Fraction(int uNumerator, int uDenominator): numerator(uNumerator), denominator(uDenominator)
 {
 	while (denominator == 0)
@@ -11,3 +15,33 @@ Fraction::Fraction(int uNumerator, int uDenominator): numerator(uNumerator), den
 
 	std::cout << "Fraction is " << numerator << "\\" << denominator << std::endl;
 }
+
+int Fraction::GetNumerator() const
+{
+	return numerator;
+}
+
+int Fraction::GetDenominator() const
+{
+	return denominator;
+}
+
+void Fraction::SetNumerator(int uNumerator)
+{
+	numerator = uNumerator;
+}
+
+void Fraction::SetDenominator(int uDenominator)
+{
+	denominator = uDenominator;
+}
+
+
+ Fraction operator+(const Fraction& f1, const Fraction& f2)
+ {
+	 int NewNumerator = f1.GetNumerator() * f2.GetDenominator() + f2.GetNumerator() * f1.GetDenominator();
+
+	 int NewDenominator = f1.GetDenominator() * f2.GetDenominator();
+	 Fraction FractionSum(NewNumerator, NewDenominator);
+	 return FractionSum;
+ }
