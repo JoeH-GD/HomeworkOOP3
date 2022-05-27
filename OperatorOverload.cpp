@@ -5,7 +5,7 @@ Fraction::Fraction()
 {
 }
 
-Fraction::Fraction(int uNumerator, int uDenominator): numerator(uNumerator), denominator(uDenominator)
+Fraction::Fraction(int uNumerator, int uDenominator) : numerator(uNumerator), denominator(uDenominator)
 {
 	while (denominator == 0)
 	{
@@ -13,7 +13,6 @@ Fraction::Fraction(int uNumerator, int uDenominator): numerator(uNumerator), den
 		std::cin >> denominator;
 	}
 
-	std::cout << "Fraction is " << numerator << "\\" << denominator << std::endl;
 }
 
 int Fraction::GetNumerator() const
@@ -34,6 +33,11 @@ void Fraction::SetNumerator(int uNumerator)
 void Fraction::SetDenominator(int uDenominator)
 {
 	denominator = uDenominator;
+}
+
+Fraction Fraction::operator-() const
+{
+	return Fraction(-numerator, denominator);
 }
 
 
@@ -73,6 +77,36 @@ void Fraction::SetDenominator(int uDenominator)
 	 Fraction FractionDev(NewNumerator, NewDenominator);
 
 	 return FractionDev;
+ }
+
+ bool operator==(const Fraction& f1, const Fraction& f2)
+ {
+	 return (f1.GetNumerator() == f2.GetNumerator()&& f1.GetDenominator() ==f2.GetDenominator());
+ }
+
+ bool operator!=(const Fraction& f1, const Fraction& f2)
+ {
+	 return !(f1 == f2);
+ }
+
+ bool operator>(const Fraction& f1, const Fraction& f2)
+ {
+	 return(f1.GetNumerator() * f2.denominator > f2.GetNumerator() * f1.GetDenominator());
+ }
+
+ bool operator>=(const Fraction& f1, const Fraction& f2)
+ {
+	 return(f1.GetNumerator() * f2.denominator >= f2.GetNumerator() * f1.GetDenominator());
+ }
+
+ bool operator<(const Fraction& f1, const Fraction& f2)
+ {
+	 return !(f1 > f2);
+ }
+
+ bool operator<=(const Fraction& f1, const Fraction& f2)
+ {
+	 return !(f1 >= f2);
  }
 
  

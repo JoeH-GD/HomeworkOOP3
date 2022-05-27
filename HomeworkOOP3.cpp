@@ -28,17 +28,46 @@ int main()
 
     std::cout << myRombus.Area() << std::endl;
 
+
+    //========================================================================================================
     PassengerCar myPassengerCar("Kia", "Rio");
 
     Bus myBus("Skoda", "24Tr");
 
     Minivan("Volkswagen", "T1 Samba");
 
+
+    //=================================================================================================================
     Card MyCard;
 
-    std::cout<<MyCard.GetValue();
+    std::cout<<MyCard.GetValue()<<std::endl;
 
+
+    //============================================================================================================
     Fraction myFraction(3, 0);
 
+    Fraction myFraction2(4, 7);
+
+    Fraction AnotherFraction;
+
+    AnotherFraction = myFraction + myFraction2;
+
+    std::cout << AnotherFraction.GetNumerator()<< "/" << AnotherFraction.GetDenominator()<< std::endl;
+
+    AnotherFraction = myFraction - myFraction2;
+
+    std::cout << AnotherFraction.GetNumerator() << "/" << AnotherFraction.GetDenominator()<< std::endl;
+
+    AnotherFraction = myFraction * myFraction2;
+
+    std::cout << AnotherFraction.GetNumerator() << "/" << AnotherFraction.GetDenominator()<< std::endl;
+
+    AnotherFraction = myFraction / myFraction2;
+
+    std::cout << AnotherFraction.GetNumerator() << "/" << AnotherFraction.GetDenominator()<< std::endl;
+
+    myFraction == myFraction2? std::cout <<"fractions are equal" <<std::endl : std::cout << "Fractions are not equal"<< std::endl;
+    myFraction>myFraction2? std::cout << "fraction 1 is more than fraction 2" << std::endl : std::cout << "fraction 1 is less than fraction 2" << std::endl;
+    myFraction <= myFraction2 ? std::cout << "fraction 1 is less than or equal to fraction 2"<< std::endl : std::cout << "fraction 1 is more than or equal to fraction 2" << std::endl;
 }
 
