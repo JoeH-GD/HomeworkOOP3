@@ -15,4 +15,7 @@ public:
 	void SetDenominator(int uDenominator);
 
 	friend Fraction operator+ (const Fraction& f1, const Fraction& f2);
+	friend Fraction operator- (const Fraction& f1, const Fraction& f2);
+	friend Fraction operator* (const Fraction& f1, const Fraction& f2);
+	friend Fraction operator/ (const Fraction& f1, const Fraction& f2);
 };

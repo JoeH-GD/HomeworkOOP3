@@ -45,3 +45,34 @@ void Fraction::SetDenominator(int uDenominator)
 	 Fraction FractionSum(NewNumerator, NewDenominator);
 	 return FractionSum;
  }
+
+ Fraction operator-(const Fraction& f1, const Fraction& f2)
+ {
+	 int NewNumerator = f1.GetNumerator() * f2.GetDenominator() - f2.GetNumerator() * f1.GetDenominator();
+
+	 int NewDenominator = f1.GetDenominator() * f2.GetDenominator();
+	 Fraction FractionDif(NewNumerator, NewDenominator);
+
+	 return FractionDif;
+ }
+
+ Fraction operator*(const Fraction& f1, const Fraction& f2)
+ {
+	 int NewNumerator = f1.GetNumerator() * f2.GetNumerator();
+
+	 int NewDenominator = f1.GetDenominator() * f2.GetDenominator();
+	 Fraction FractionMulti(NewNumerator, NewDenominator);
+	 return FractionMulti;
+ }
+
+ Fraction operator/(const Fraction& f1, const Fraction& f2)
+ {
+	 int NewNumerator = f1.GetNumerator() * f2.GetDenominator();
+
+	 int NewDenominator = f1.GetDenominator() * f2.GetNumerator();
+	 Fraction FractionDev(NewNumerator, NewDenominator);
+
+	 return FractionDev;
+ }
+
+ 
