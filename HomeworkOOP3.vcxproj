@@ -142,6 +142,7 @@
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="HomeworkOOP3.cpp" />
+    <ClCompile Include="OperatorOverload.cpp" />
     <ClCompile Include="Shape.cpp" />
   </ItemGroup>
   <ItemGroup>

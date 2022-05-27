@@ -8,6 +8,9 @@ private:
 
 public:
 	Car();
+	std::string GetModel() const;
+	std::string GetCompany() const;
+	Car(std::string uCompany, std::string uModel);
 	virtual ~Car();
 };
 
@@ -18,7 +21,7 @@ private:
 public:
 
 	PassengerCar();
-
+	
 	PassengerCar(std::string uCompany, std::string uModel);
 
 };

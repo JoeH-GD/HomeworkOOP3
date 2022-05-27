@@ -5,6 +5,7 @@
 #include "Shape.h"
 #include "Car.h"
 #include "Card.h"
+#include "OperatorOverload.h"
 
 int main()
 {
@@ -37,6 +38,7 @@ int main()
 
     std::cout<<MyCard.GetValue();
 
+    Fraction myFraction(3, 0);
 
 }
 
